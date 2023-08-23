@@ -12,6 +12,10 @@
     <img [src]="product.image" class="image" />
   </h3>
   
+  <p *ngIf="!product.description">
+    Description coming soon
+  </p>
+
   <p *ngIf="product.description">
     Description: {{ product.description }}
   </p>
