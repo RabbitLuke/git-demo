@@ -1,0 +1,12 @@
+.flex {
+    display: flex;
+}
+
+.center {
+    align-items: center;
+}
+
+.image {
+    padding-left: 12px;
+    width: 30px;
+}

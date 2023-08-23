@@ -2,14 +2,16 @@
 
 <div *ngFor="let product of products">
 
-  <h3>
+  <h3 class="flex">
     <a
       [title]="product.name + ' details'"
-      [routerLink]="['/products', product.id]">
+      [routerLink]="['/products', product.id]"
+      class="flex center">
       {{ product.name }}
     </a>
+    <img [src]="product.image" class="image" />
   </h3>
-
+  
   <p *ngIf="product.description">
     Description: {{ product.description }}
   </p>
