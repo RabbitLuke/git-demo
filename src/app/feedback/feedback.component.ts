@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FeedbackService } from '../feedback.service';
-import { FormBuilder, FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-feedback',
@@ -8,18 +8,18 @@ import { FormBuilder, FormControl } from '@angular/forms';
   styleUrls: ['./feedback.component.css']
 })
 export class FeedbackComponent {
-  feedbackForm = this.formBuilder.group({
-    name: '',
-    address: ''
-  });
+public form: FormGroup = new FormGroup({
+  name: new FormControl(''),
+  feedback: new FormControl('')
+});
 
-  constructor(private feedbackService: FeedbackService, private formBuilder: FormBuilder,) {
-    feedbackService.getFact().subscribe(res => {
-      console.log('wow', res);
-    });
+  constructor(private feedbackService: FeedbackService) {
   }
 
   onSubmit(): void {
    // Do a thing
+   this.feedbackService.sendFeedback('', '').subscribe((result => {
+    // Do a thing
+   }))
   }
 }

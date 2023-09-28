@@ -104,6 +104,18 @@ label {
   padding-right: 4px;
 }
 
+.mr-2 {
+  margin-right: 8px;
+}
+
+.pb-4 {
+  padding-bottom: 16px;
+}
+
+.flex {
+  display: flex;
+}
+
 /* Top Bar */
 
 app-top-bar {

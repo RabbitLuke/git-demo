@@ -1,20 +1,14 @@
 <h1>Please give us feedback</h1>
-<form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
-
+<form [formGroup]="form">
     <div>
-      <label for="name">
-        Name
-      </label>
+      <label for="name">Name</label>
       <input id="name" type="text" formControlName="name">
     </div>
   
-    <div>
-      <label for="address">
-        Address
-      </label>
-      <input id="address" type="text" formControlName="address">
+    <div class="pb-4">
+      <label for="feedback">Feedback</label>
+      <textarea id="feedback" formControlName="feedback" class="large-text-area"></textarea>
     </div>
   
-    <button class="button" type="submit">Purchase</button>
-  
-  </form>
+    <button class="button" type="submit" (click)="onSubmit()">Submit</button>
+</form>
