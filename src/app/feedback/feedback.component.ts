@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FeedbackService } from '../feedback.service';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Feedback } from '../models/feedback';
 
 @Component({
   selector: 'app-feedback',
@@ -18,7 +19,11 @@ public form: FormGroup = new FormGroup({
 
   onSubmit(): void {
    // Do a thing
-   this.feedbackService.sendFeedback('', '').subscribe((result => {
+   debugger;
+   const name = this.form.get('name')?.value;
+   const feedback = this.form.get('feedback')?.value;
+
+   this.feedbackService.sendFeedback({name, feedback}).subscribe((result => {
     // Do a thing
    }))
   }
