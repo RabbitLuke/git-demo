@@ -18,13 +18,9 @@ public form: FormGroup = new FormGroup({
   }
 
   onSubmit(): void {
-   // Do a thing
-   debugger;
    const name = this.form.get('name')?.value;
    const feedback = this.form.get('feedback')?.value;
 
-   this.feedbackService.sendFeedback({name, feedback}).subscribe((result => {
-    // Do a thing
-   }))
+   this.feedbackService.sendFeedback({name, feedback});
   }
 }
