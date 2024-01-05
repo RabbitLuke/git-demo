@@ -4,6 +4,17 @@
       <label for="name">Name</label>
       <input id="name" type="text" formControlName="name">
     </div>
+
+    <div class="flex">
+      <label for="feedbackTypePositive">
+          <span>Positive</span>
+        <input id="feedbackTypePositive" type="radio" [value]="true" formControlName="feedbackType">
+      </label>
+      <label for="feedbackTypeNegative">
+        <span>Negative</span>
+        <input id="feedbackTypeNegative" type="radio" [value]="false" formControlName="feedbackType">
+      </label>
+    </div>
   
     <div class="pb-4">
       <label for="feedback">Feedback</label>

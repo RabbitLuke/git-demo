@@ -11,6 +11,7 @@ import { Feedback } from '../models/feedback';
 export class FeedbackComponent {
 public form: FormGroup = new FormGroup({
   name: new FormControl(''),
+  feedbackType: new FormControl(null),
   feedback: new FormControl('')
 });
 
@@ -19,8 +20,9 @@ public form: FormGroup = new FormGroup({
 
   onSubmit(): void {
    const name = this.form.get('name')?.value;
+   const feedbackType = this.form.get('feedbackType')?.value;
    const feedback = this.form.get('feedback')?.value;
 
-   this.feedbackService.sendFeedback({name, feedback});
+   this.feedbackService.sendFeedback({name, feedbackType, feedback});
   }
 }
