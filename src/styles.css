@@ -1,5 +1,9 @@
 /* Global Styles */
 
+
+@tailwind components;
+@tailwind utilities;
+
 * {
   font-family: 'Roboto', Arial, sans-serif;
   color: #616161;
