@@ -5,6 +5,11 @@
       <input id="name" type="text" formControlName="name">
     </div>
 
+    <div>
+      <label for="email">Email Address</label>
+      <input id="email" type="text" formControlName="name">
+    </div>
+
     <div class="flex">
       <label for="feedbackTypePositive" class="flex">
           <span class="pr-2">Positive</span>
@@ -20,6 +25,8 @@
       <label for="feedback">Feedback</label>
       <textarea id="feedback" formControlName="feedback" class="large-text-area"></textarea>
     </div>
+
+
   
     <button class="button" type="submit" (click)="onSubmit()">Submit</button>
 </form>
